@@ -51,6 +51,7 @@ Puppet::Type.type(:cloudstack_instance).provide(
     ")
     connection.servers.bootstrap(
       :display_name      => resource[:name],
+      :name		=> resource[:name],
       :image_id          => image_id,
       :flavor_id         => flavor_id,
       :zone_id           => zone_id,
